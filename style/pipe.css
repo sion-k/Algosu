@@ -1,0 +1,452 @@
+
+/* 기본 파이프 CSS*/
+.pipe {
+	background: var(--pipe);
+	width: 25px;
+	height: 25px;
+	margin: 57.5px;
+	z-index: 1;
+	transform: scale(1.05);
+}
+
+/* 회전 */
+.pipe._90 {
+    transform: rotate(90deg);
+}
+.pipe._180 {
+    transform: rotate(180deg);
+}
+.pipe._270 {
+    transform: rotate(270deg);
+}
+
+/* 연관 파이프(기본) CSS */
+.pipe.line {
+    box-shadow: -62.5px 15px 0 -5px var(--pipe),
+	-62.5px 0px 0 -5px var(--pipe),
+	-62.5px -15px 0 -5px var(--pipe),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--pipe),
+	62.5px 0px 0 -5px var(--pipe),
+	62.5px -15px 0 -5px var(--pipe),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark);
+}
+.pipe.cross {
+	box-shadow: -62.5px 15px 0 -5px var(--pipe),
+	-62.5px 0 0 -5px var(--pipe),
+	-62.5px -15px 0 -5px var(--pipe),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--pipe),
+	0px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--pipe),
+	62.5px 0px 0 -5px var(--pipe),
+	62.5px -15px 0 -5px var(--pipe),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	15px 62.5px 0 -5px var(--pipe),
+	0 62.5px 0 -5px var(--pipe),
+	-15px 62.5px 0 -5px var(--pipe),
+	-15px 62.5px 0 0 var(--pipe-dark),
+	0 62.5px 0 0 var(--pipe-dark),
+	15px 62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 24px 0 0 var(--pipe),
+	0 40px 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 25px 0 5px var(--pipe-dark),
+	0 40px 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+.pipe.angle {
+	box-shadow: -62.5px 15px 0 -5px var(--pipe),
+	-62.5px 0px 0 -5px var(--pipe),
+	-62.5px -15px 0 -5px var(--pipe),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--pipe),
+	0px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+.pipe.trident {
+	box-shadow: -62.5px 15px 0 -5px var(--pipe),
+	-62.5px 0px 0 -5px var(--pipe),
+	-62.5px -15px 0 -5px var(--pipe),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--pipe),
+	0px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 -5px var(--pipe),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--pipe),
+	62.5px 0px 0 -5px var(--pipe),
+	62.5px -15px 0 -5px var(--pipe),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+/* 종속 파이프 CSS */
+.pipe.sub.line {
+	box-shadow: -62.5px 15px 0 -5px var(--gold),
+	-62.5px 0px 0 -5px var(--gold),
+	-62.5px -15px 0 -5px var(--gold),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--gold),
+	62.5px 0px 0 -5px var(--gold),
+	62.5px -15px 0 -5px var(--gold),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark);
+}
+.pipe.sub.cross {
+	box-shadow: -62.5px 15px 0 -5px var(--gold),
+	-62.5px 0 0 -5px var(--gold),
+	-62.5px -15px 0 -5px var(--gold),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--gold),
+	0px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--gold),
+	62.5px 0px 0 -5px var(--gold),
+	62.5px -15px 0 -5px var(--gold),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	15px 62.5px 0 -5px var(--gold),
+	0 62.5px 0 -5px var(--gold),
+	-15px 62.5px 0 -5px var(--gold),
+	-15px 62.5px 0 0 var(--pipe-dark),
+	0 62.5px 0 0 var(--pipe-dark),
+	15px 62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 24px 0 0 var(--pipe),
+	0 40px 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 25px 0 5px var(--pipe-dark),
+	0 40px 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+.pipe.sub.angle {
+	box-shadow: -62.5px 15px 0 -5px var(--gold),
+	-62.5px 0px 0 -5px var(--gold),
+	-62.5px -15px 0 -5px var(--gold),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--gold),
+	0px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+.pipe.sub.trident {
+	box-shadow: -62.5px 15px 0 -5px var(--gold),
+	-62.5px 0px 0 -5px var(--gold),
+	-62.5px -15px 0 -5px var(--gold),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--gold),
+	0px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 -5px var(--gold),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--gold),
+	62.5px 0px 0 -5px var(--gold),
+	62.5px -15px 0 -5px var(--gold),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+/* 심화 파이프 CSS */
+.pipe.adv.line {
+	box-shadow: -62.5px 15px 0 -5px var(--ruby),
+	-62.5px 0px 0 -5px var(--ruby),
+	-62.5px -15px 0 -5px var(--ruby),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--ruby),
+	62.5px 0px 0 -5px var(--ruby),
+	62.5px -15px 0 -5px var(--ruby),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark);
+}
+.pipe.adv.cross {
+	box-shadow: -62.5px 15px 0 -5px var(--ruby),
+	-62.5px 0 0 -5px var(--ruby),
+	-62.5px -15px 0 -5px var(--ruby),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--ruby),
+	0px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--ruby),
+	62.5px 0px 0 -5px var(--ruby),
+	62.5px -15px 0 -5px var(--ruby),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	15px 62.5px 0 -5px var(--ruby),
+	0 62.5px 0 -5px var(--ruby),
+	-15px 62.5px 0 -5px var(--ruby),
+	-15px 62.5px 0 0 var(--pipe-dark),
+	0 62.5px 0 0 var(--pipe-dark),
+	15px 62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 24px 0 0 var(--pipe),
+	0 40px 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 25px 0 5px var(--pipe-dark),
+	0 40px 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+.pipe.adv.angle {
+	box-shadow: -62.5px 15px 0 -5px var(--ruby),
+	-62.5px 0px 0 -5px var(--ruby),
+	-62.5px -15px 0 -5px var(--ruby),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--ruby),
+	0px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+.pipe.adv.trident {
+	box-shadow: -62.5px 15px 0 -5px var(--ruby),
+	-62.5px 0px 0 -5px var(--ruby),
+	-62.5px -15px 0 -5px var(--ruby),
+	-62.5px -15px 0 0 var(--pipe-dark),
+	-62.5px 0 0 0 var(--pipe-dark),
+	-62.5px 15px 0 0 var(--pipe-dark),
+	15px -62.5px 0 -5px var(--ruby),
+	0px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 -5px var(--ruby),
+	-15px -62.5px 0 0 var(--pipe-dark),
+	0 -62.5px 0 0 var(--pipe-dark),
+	15px -62.5px 0 0 var(--pipe-dark),
+	62.5px 15px 0 -5px var(--ruby),
+	62.5px 0px 0 -5px var(--ruby),
+	62.5px -15px 0 -5px var(--ruby),
+	62.5px -15px 0 0 var(--pipe-dark),
+	62.5px 0 0 0 var(--pipe-dark),
+	62.5px 15px 0 0 var(--pipe-dark),
+	-24px 0 0 0 var(--pipe),
+	-40px 0 0 0 var(--pipe),
+	24px 0 0 0 var(--pipe),
+	40px 0 0 0 var(--pipe),
+	0 -24px 0 0 var(--pipe),
+	0 -40px 0 0 var(--pipe),
+	0 0 0 5px var(--pipe-dark),
+	25px 0 0 5px var(--pipe-dark),
+	40px 0 0 5px var(--pipe-dark),
+	-40px 0 0 5px var(--pipe-dark),
+	-25px 0 0 5px var(--pipe-dark),
+	0 -40px 0 5px var(--pipe-dark),
+	0 -25px 0 5px var(--pipe-dark);
+}
+
+/* 파이프 물 CSS */
+.pipe.water.line::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 25px;
+	height: 25px;
+	background: var(--main-color);
+    box-shadow:-25px 0 0 0 var(--main-color),
+	-37.5px 0 0 0 var(--main-color),
+	25px 0 0 0 var(--main-color),
+	37.5px 0 0 0 var(--main-color);
+}
+.pipe.water.cross::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 25px;
+	height: 25px;
+	background: var(--main-color);
+    box-shadow:-25px 0 0 0 var(--main-color),
+	-37.5px 0 0 0 var(--main-color),
+	25px 0 0 0 var(--main-color),
+	37.5px 0 0 0 var(--main-color),
+    0 -25px 0 0 var(--main-color),
+    0 -37.5px 0 0 var(--main-color),
+	0 25px 0 0 var(--main-color),
+	0 37.5px 0 0 var(--main-color);
+}
+.pipe.water.angle::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 25px;
+	height: 25px;
+	background: var(--main-color);
+    box-shadow:-25px 0 0 0 var(--main-color),
+    0 -25px 0 0 var(--main-color),
+    0 -37.5px 0 0 var(--main-color),
+	-37.5px 0 0 0 var(--main-color);
+}
+.pipe.water.trident::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 25px;
+	height: 25px;
+	background: var(--main-color);
+    box-shadow:-25px 0 0 0 var(--main-color),
+	-37.5px 0 0 0 var(--main-color),
+    0 -25px 0 0 var(--main-color),
+    0 -37.5px 0 0 var(--main-color),
+	25px 0 0 0 var(--main-color),
+	37.5px 0 0 0 var(--main-color);
+}
