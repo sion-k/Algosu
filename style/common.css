@@ -92,7 +92,7 @@ body {
 	animation-name: select;
 	
 	/* 이벤트 지속시간 */
-	animation-duration: 3s;
+	animation-duration: 2s;
 	
 	/* 이벤트 반복 여부 */
 	animation-iteration-count: infinite;
@@ -118,11 +118,17 @@ body {
 	display: flex;
 	align-self: center;
 	flex-basis: 50%;
-
 	/* form 내부에 해당 컴포넌트가 차지할 비율 */
   flex-grow: 1;
 }
 
+/* Container의 제목을 표현하는 Element */
+.big-container.title {
+	width: 207px;
+	height: 84px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	opacity: 0.5;
+}
 
 /* label CSS */
 .big-container label {
@@ -185,6 +191,36 @@ body {
 	text-align: center;
 }
 
+/* 작은 컴포넌트에 물을 채움 */
+.tiny-container.water {
+
+}
+
+.tiny-container .title {
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* 작은 컴포넌트 */
+.tiny-container .big-title {
+	color: var(--main-color);
+	margin: 50px auto;
+	font-size: 24px;
+}
+
+.tier {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 39px;
+	height: 50px;
+	opacity: 1;
+}
+
 /* 선택한 작은 컴포넌트에 애니메이션 효과를 넣기위한 CSS */
 .tiny-container.selected::after {
 	content: '';
@@ -195,7 +231,7 @@ body {
 	animation-name: select-tiny;
 	
 	/* 이벤트 지속시간 */
-	animation-duration: 3s;
+	animation-duration: 2s;
 	
 	/* 이벤트 반복 여부 */
 	animation-iteration-count: infinite;
