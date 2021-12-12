@@ -1,13 +1,14 @@
 :root {
 	/* Colors */
-    --main-color: #5FBBD1;
-    --main-color-dark: #13202B;
-    --bronze: #BA5000;
-    --sliver: #3A607D;
-    --gold: #FA9500;
-    --platinum: #00E69F;
-    --diamond: #00B7FF;
-    --ruby: #FF005F;
+	--main-color: #5FBBD1;
+	--main-color-bold: #3a8699;
+	--main-color-dark: #13202B;
+	--bronze: #BA5000;
+	--sliver: #3A607D;
+	--gold: #FA9500;
+	--platinum: #00E69F;
+	--diamond: #00B7FF;
+	--ruby: #FF005F;
 	--pipe: #A3A3A3;
 	--pipe-dark: #707070;
 }
@@ -105,20 +106,20 @@ body {
 	font-size: 35px;
 }
 
-/* 큰 컴포너트 내 form CSS. 가운데 정렬을 위해 사용 */
-.big-container form {
+/* 큰 컴포넌트 내 input CSS. 가운데 정렬을 위해 사용 */
+.big-container .input {
 	display: flex;
 	flex-direction: column;
 	height: 250px;
 	margin: 0;
 }
 
-/* 가운데 정렬을 위해 사용한 form 내부 div의 CSS*/
-.big-container form div {
+/* 가운데 정렬을 위해 사용한 input 내부 div의 CSS*/
+.big-container .input div {
 	display: flex;
 	align-self: center;
 	flex-basis: 50%;
-	/* form 내부에 해당 컴포넌트가 차지할 비율 */
+	/* input 내부에 해당 컴포넌트가 차지할 비율 */
   flex-grow: 1;
 }
 
@@ -191,18 +192,37 @@ body {
 	text-align: center;
 }
 
-/* 작은 컴포넌트에 물을 채움 */
-.tiny-container.water {
+.tiny-container * {
+	z-index: 0;
+}
 
+/* 작은 컴포넌트에 물을 채움 */
+.tiny-container .water {
+	width: 0;
+	height: 0;
+	position: relative;
+	overflow: visible;
+}
+.tiny-container .water::before {
+	position: absolute;
+	opacity: 0.75;
+	content: "";
+	/* 물의 잔량을 조절 */
+	margin-top: 10px;
+	width: 130px;
+	height: 130px;
+	background-color: var(--main-color);
 }
 
 .tiny-container .title {
-	margin: auto;
-	width: 100px;
-	height: 40px;
-	background: #FFFFFF 0% 0% no-repeat padding-box;
-	font-size: 16px;
+	width: 95px;
+	margin: 0 auto;
+	padding:3px;
+	margin-top: 10px;
+	font-size: 14px;
 	font-weight: bold;
+	align-self: center;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* 작은 컴포넌트 */
@@ -213,12 +233,12 @@ body {
 }
 
 .tier {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	margin-top: 20px;
 	width: 39px;
 	height: 50px;
 	opacity: 1;
+	flex-basis: 50px;
 }
 
 /* 선택한 작은 컴포넌트에 애니메이션 효과를 넣기위한 CSS */

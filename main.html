@@ -5,8 +5,12 @@
 		<title>알고수</title>
     <link rel="stylesheet" href="./style/common.css"/>
     <link rel="stylesheet" href="./style/pipe.css"/>
+		<script src="main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   </head> 
   <body>
+		<!-- 배경은 사진이 아니라 HTML Element로 구성-->
 		<table id="background">
 			<tr>
 				<td></td>
@@ -135,29 +139,36 @@
 					<div class="pipe line _90"></div>
 				</td>
 			</tr>
+			<tr>
+				<td></td><td></td><td></td>
+				<td>
+					<div class="tiny-container"></div>
+				</td>
+			</tr>
 		</table>
 
+		<!-- 로그인 Component -->
 		<div class="big-container">
 			<h1>ALGOSU</h1>
-			<form>
+			<div class="input">
 				<div>
 					<label for="id">ID</label>
-					<input name="id" type="text"/>
+					<input name="id" type="text" id="id"/>
 				</div>
 
 				<div>
 					<label for="pw">PW</label>
-					<input name="pw" type="password"/>
+					<input name="pw" type="password" id="pw"/>
 				</div>
 				
-				<button id="register-btn">Regsiter</button>
+				<button id="register-btn" onclick="signUp()">Register</button>
 				
 				<div id="submit-btn">
-					
-					<!--<input name="submit" type="submit" value="LOGIN"/>-->
-					<input type="button" value="LOGIN" onClick="location.href='home.html'">
+					<input type="button" value="LOGIN" onclick="signIn()">
 				</div>
-			</form>
+
+			</div>
 		</div>
+
   </body>
 </html>

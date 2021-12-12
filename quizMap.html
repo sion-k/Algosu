@@ -4,7 +4,9 @@
 		<meta charset="utf-8" />
 		<title>알고수</title>
     <link rel="stylesheet" href="./style/common.css"/>
-	<link rel="stylesheet" href="./style/pipe.css"/>
+		<link rel="stylesheet" href="./style/pipe.css"/>
+		<link rel="stylesheet" href="./style/info.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head> 
   <body>
 	  <table>
@@ -118,19 +120,34 @@
 		  </tr>
 		  <tr>
 			  <td>
-				  <div class="tiny-container">
+				  <div class="tiny-container" onclick="location.href='home.html'">
 						<div class="big-title">홈화면으로</div>
 					</div>
 			  </td>
 			  <td></td>
 			  <td></td>
 			  <td>
-				  <div class="tiny-container water">
+				  <div class="tiny-container">
+					  	<div class="water">
+							</div>
 						<img src="tier/1.svg" class="tier">
 						<div class="title">Hello World</div>
 					</div>
 			  </td>
 		  </tr>
 		</table>
+		<div class="topic">
+			<h1>수학</h1>
+		</div>
+		<div class="info">
+			<h1>토마토</h1>
+			<span>문제링크<img src="oj/codeforces.png" onclick="location.href='home.html'"/></span>
+			<div id="tag">
+				<div>그래프 이론</div>
+				<div>너비 우선 탐색</div>
+			</div>
+			<h2>Hint 1</h2>
+			<h2>Hint 2</h2>
+		</div>
   </body>
 </html>
