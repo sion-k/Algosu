@@ -1,0 +1,9 @@
+{"id":"boj2163","adj":["boj1110","boj13909"],"tag":"math"}
+{"id":"boj1110","adj":["boj4673","boj11966"],"tag":"math"}
+{"id":"boj13909","adj":["boj2581","boj2609","boj1977"],"tag":"math"}
+{"id":"boj4673","tag":"math"}
+{"id":"boj11966","adj":["boj1094"],"tag":"math"}
+{"id":"boj2581","tag":"math"}
+{"id":"boj2609","tag":"math"}
+{"id":"boj1977","tag":"math"}
+{"id":"boj1094","tag":"math"}

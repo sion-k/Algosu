@@ -5,8 +5,8 @@ function signIn() {
 	xhttp.onload = function () {
 		let flag = this.responseText;
 		if (flag) {
-			sessionStorage.setItem("handle", flag);
-			console.log(sessionStorage.getItem("handle"));
+			sessionStorage.setItem("id", flag);
+			alert("로그인 성공" + flag);
 			location.href = "home.html";
 		} else {
 			alert("로그인을 실패했습니다.");

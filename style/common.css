@@ -149,6 +149,25 @@ body {
 	align-items: flex-end;
 }
 
+/* 작은 컴포넌트에 물을 채움 */
+.big-container .water {
+	width: 0;
+	height: 0;
+	position: relative;
+	overflow: visible;
+}
+
+.big-container .water::before {
+	position: absolute;
+	opacity: 0.75;
+	content: "";
+	/* 물의 잔량을 조절 */
+	margin-top: 10px;
+	width: 360px;
+	height: 360px;
+	background-color: var(--main-color);
+}
+
 /*  */
 #register-btn {
 	margin-top: 20px;
@@ -203,6 +222,7 @@ body {
 	position: relative;
 	overflow: visible;
 }
+
 .tiny-container .water::before {
 	position: absolute;
 	opacity: 0.75;
@@ -268,4 +288,9 @@ tr {
 }
 td {
 	width: 130px;
+}
+
+.big-container.progress-container {
+	width: 450px;
+	height: 450px;
 }

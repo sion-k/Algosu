@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id = $_GET["id"];
 $pw = $_GET["pw"];
 $file = fopen("user.json", "r");
