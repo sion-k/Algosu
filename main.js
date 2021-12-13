@@ -7,7 +7,7 @@ function signIn() {
 		if (flag) {
 			sessionStorage.setItem("id", flag);
 			alert("로그인 성공" + flag);
-			location.href = "home.html";
+			location.href = "home/home.html";
 		} else {
 			alert("로그인을 실패했습니다.");
 		}

@@ -9,7 +9,7 @@ extract($_POST);
 extract($_GET);
 extract($_SERVER);
 
-$url = "https://www.acmicpc.net/user/h0422ys";
+$url = "https://www.acmicpc.net/user/" . $_GET["handle"];
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL,$url);
@@ -29,6 +29,6 @@ $result = [];
 error_reporting(0);
 foreach($tmp as $v) {
     $cv = explode("</a>", explode("/problem/", $v, 2)[1])[0];
-    echo $cv . "\n";
+    echo $cv . " ";
 }
 ?>
