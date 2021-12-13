@@ -65,4 +65,7 @@ function setProgress() {
 	}
 	let per = parseInt(cnt / problem.length * 100);
 	$("#progress").html(per + "%");
+	if (per == 100) {
+		
+	}
 }

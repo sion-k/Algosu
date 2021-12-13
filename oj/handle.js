@@ -20,7 +20,7 @@ function render(oj) {
 			alert("로그인을 실패했습니다.");
 		}
 	}
-	xhttp.open("GET", "oj/getHandle.php?" + "oj=" + oj);
+	xhttp.open("GET", "getHandle.php?" + "oj=" + oj);
 	xhttp.send();
 }
 
@@ -29,7 +29,7 @@ function updateAll() {
 	for (let oj of ojs) {
 		update(oj);
 	}
-	location.href="home.html";
+	location.href="../home/home.html";
 }
 
 function update(oj) {
@@ -44,6 +44,6 @@ function update(oj) {
 	}
 	let handle = $("#" + oj).html();
 	if (handle === "no handle") return;
-	xhttp.open("GET", "oj/setHandle.php?" + "oj=" + oj + "&handle=" + handle);
+	xhttp.open("GET", "setHandle.php?" + "oj=" + oj + "&handle=" + handle);
 	xhttp.send();
 }
