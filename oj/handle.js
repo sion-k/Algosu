@@ -20,7 +20,8 @@ function render(oj) {
 			alert("로그인을 실패했습니다.");
 		}
 	}
-	xhttp.open("GET", "getHandle.php?" + "oj=" + oj);
+	let id = sessionStorage.getItem("id");
+	xhttp.open("GET", "getHandle.php?" + "oj=" + oj + "&id=" + id);
 	xhttp.send();
 }
 
@@ -44,6 +45,7 @@ function update(oj) {
 	}
 	let handle = $("#" + oj).html();
 	if (handle === "no handle") return;
-	xhttp.open("GET", "setHandle.php?" + "oj=" + oj + "&handle=" + handle);
+	let id = sessionStorage.getItem("id");
+	xhttp.open("GET", "setHandle.php?" + "oj=" + oj + "&handle=" + handle + "&id=" + id);
 	xhttp.send();
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = $_SESSION["id"];
+$id = $_GET["id"];
 $oj = $_GET["oj"];
 $handle = $_GET["handle"];
 

@@ -14,12 +14,13 @@ function getHandle(oj) {
 		let flag = this.responseText;
 		if (flag) {
 			handle[oj] = flag;
+			getProblem();
 		} else {
 			alert("로그인을 실패했습니다.");
 		}
-		getProblem();
 	}
-	xhttp.open("GET", "../oj/getHandle.php?oj=" + oj);
+	let id = sessionStorage.getItem("id");
+	xhttp.open("GET", "../oj/getHandle.php?oj=" + oj + "&id=" + id);
 	xhttp.send();
 }
 
@@ -29,10 +30,10 @@ function getProblem() {
 		let flag = this.responseText;
 		if (flag) {
 			problem = flag.trim().split(" ");
+			getSolved();
 		} else {
 			alert("로그인을 실패했습니다.");
 		}
-		getSolved();
 	}
 	xhttp.open("GET", "../problem/getProblem.php");
 	xhttp.send();
@@ -44,10 +45,10 @@ function getSolved() {
 		let flag = this.responseText;
 		if (flag) {
 			solved = flag.trim().split(" ");
+			setProgress();
 		} else {
 			alert("로그인을 실패했습니다.");
 		}
-		setProgress();
 	}
 	xhttp.open("GET", "../problem/getSolved.php?handle=" + handle["boj"]);
 	xhttp.send();
@@ -65,7 +66,4 @@ function setProgress() {
 	}
 	let per = parseInt(cnt / problem.length * 100);
 	$("#progress").html(per + "%");
-	if (per == 100) {
-		
-	}
 }
