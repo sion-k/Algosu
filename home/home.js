@@ -1,5 +1,5 @@
-let problem;
-let solved;
+let problem = [];
+let solved = [];
 let handle = {};
 
 getHandle("boj");
@@ -29,7 +29,11 @@ function getProblem() {
 	xhttp.onload = function () {
 		let flag = this.responseText;
 		if (flag) {
-			problem = flag.trim().split(" ");
+			json = flag.trim().split("\n");
+			for (j of json) {
+				j = JSON.parse(j);
+				problem.push(j["id"]);
+			}
 			getSolved();
 		} else {
 			alert("로그인을 실패했습니다.");
