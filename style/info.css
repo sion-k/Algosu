@@ -26,6 +26,7 @@
 }
 
 .info {
+	visibility: hidden;
 	position: absolute;
 	bottom: 50px;
 	right: 0px;
@@ -62,7 +63,7 @@
 	font-size: 14px;
 	display: flex;
 }
-.info span img{
+.info span img {
 	width: 32px;
 	height: 32px;
 	border-radius: 10px;

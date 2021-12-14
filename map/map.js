@@ -2,6 +2,19 @@ let problem = [];
 let solved = [];
 let handle = {};
 
+function select() {
+	$(".info").css("visibility", "visible");
+	removeSelected();
+	$(this).addClass("selected");
+	renderInfo($(this).children().last().html());
+}
+
+$(".tiny-container").bind("click", select);
+
+function removeSelected() {
+	$(".selected").removeClass("selected");
+}
+
 getHandle("boj");
 
 // 이미 푼 문제들 물 채우기
@@ -14,6 +27,11 @@ function render() {
 			console.log("solved : " + key);
 		}
 	}
+}
+
+function renderInfo(name) {
+	$("#problem_name").html(name);
+	$("#problem_link").attr("href", "http://boj.kr/" + getID(name).substring(3));
 }
 
 function getID(name) {
