@@ -1,4 +1,5 @@
 <?php
+// 핸들을 가져오는 함수
 session_start();
 $id = $_GET["id"];
 $oj = $_GET["oj"];

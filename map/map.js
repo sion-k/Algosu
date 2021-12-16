@@ -2,6 +2,7 @@ let problem = [];
 let solved = [];
 let handle = {};
 
+// 문제를 선택한다
 function select() {
 	$(".info").css("visibility", "visible");
 	removeSelected();
@@ -29,11 +30,13 @@ function render() {
 	}
 }
 
+// 오른쪽 아래에 나타나는 문제에 관한 정보
 function renderInfo(name) {
 	$("#problem_name").html(name);
 	$("#problem_link").attr("href", "http://boj.kr/" + getID(name).substring(3));
 }
 
+// 이름이 주어질 때 문제의 ID를 반환
 function getID(name) {
 	for (let p of problem) {
 		if (p["name"] === name) {
